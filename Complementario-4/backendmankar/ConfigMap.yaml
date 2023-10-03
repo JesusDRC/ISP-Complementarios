@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mankar
+  namespace: mankar-proyect
+data:
+  projectName: practkubernetes
+  orgId: 628957779185c1236b0b17d5
+  baseUrl: https://cloud.mongodb.com:8443
