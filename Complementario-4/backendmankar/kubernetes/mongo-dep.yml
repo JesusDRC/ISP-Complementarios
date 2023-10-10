@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-deployment
-  namespace: default
+  name: mongo-dep
+  namespace: pruebas-mankar
 spec:
   replicas: 1
   selector:
@@ -22,5 +22,5 @@ spec:
           - name: mongo_password
             valueFrom:
               secretKeyRef:
-                name: db-secret
+                name: contra-db
                 key: db_password

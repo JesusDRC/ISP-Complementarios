@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rest-service-deployment
-  namespace: default
+  name: rest-dep
+  namespace: pruebas-mankar
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: rest-service
@@ -15,34 +15,25 @@ spec:
     spec:
       containers:
         - name: rest-service
-          image: carol018/taller3:3.0.0
+          image: jesusdrc/backmankar
           ports:
-          - containerPort: 4000
+          - containerPort: 3000
           env:
-          - name: APP_VERSION
-            value: "1.1.0"
           - name: PORT
-            value: "4000"
-          - name: STAGE
-            value: "prod"
-          - name: orgId
-            valueFrom:
-              configMapKeyRef:
-                name: app-config
-                key: orgId
+            value: "3000"
           - name: baseUrl
             valueFrom:
               configMapKeyRef:
-                name: app-config
+                name: app-conf
                 key: baseUrl
           - name: SecretsUser
             valueFrom:
               secretKeyRef:
-                name: db-secret
+                name: contra-db
                 key: db_user
           - name: SecretsPassword
             valueFrom:
               secretKeyRef:
-                name: db-secret
+                name: contra-db
                 key: db_password
 
