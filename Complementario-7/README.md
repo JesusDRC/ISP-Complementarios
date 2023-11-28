@@ -4,7 +4,7 @@
 # INTEGRANTES
 * Muñoz Lopez Kelvin Paul
 * Pincay Gonzalez Manuel Jarod
-* Reyes Carreño Jesús David 
+* Reyes Carreño Jesús David  
 * Yudeh Andres Branly  
 
 # DIAGRAMA ENTIDAD RELACIÓN
